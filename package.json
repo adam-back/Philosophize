@@ -1,0 +1,23 @@
+{
+  "name": "philosophize",
+  "version": "1.0.0",
+  "description": "Get from any Wikipedia topic to the Philosophy page.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-back/Philosophize.git"
+  },
+  "keywords": [
+    "wikipedia",
+    "philosophy"
+  ],
+  "author": "Adam Back",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adam-back/Philosophize/issues"
+  },
+  "homepage": "https://github.com/adam-back/Philosophize#readme"
+}
