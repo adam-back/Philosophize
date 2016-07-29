@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/adam-back/Philosophize/issues"
   },
-  "homepage": "https://github.com/adam-back/Philosophize#readme"
+  "homepage": "https://github.com/adam-back/Philosophize#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "q": "^1.4.1",
+    "request": "^2.74.0",
+    "sequelize": "^3.23.6"
+  }
 }
