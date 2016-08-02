@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('Philosophize:server');
 var http = require('http');
+var models = require( '../models' );
 
 /**
  * Get port from environment and store in Express.
@@ -27,7 +28,24 @@ var server = http.createServer(app);
 
 server.listen(port);
 server.on('error', onError);
-server.on('listening', onListening);
+server.on('listening', function() {
+  models.sequelize.sync()
+  .then(function() {
+    return models.page.drop();
+  })
+  .then(function() {
+    return models.path.drop( { cascade: true } );
+  })
+  .then(function() {
+    return models.sequelize.sync();
+  })
+  .then(function() {
+    onListening();
+  })
+  .catch(function( error ) {
+    throw new Error( error );
+  });
+});
 
 /**
  * Normalize a port into a number, string, or false.

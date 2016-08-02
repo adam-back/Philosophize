@@ -10,8 +10,8 @@ Get from any Wikipedia topic to the Philosophy page.
 
 **Postgres**
 
-1. Start PostgreSQL.
-1. Create database with the name wikiDB.
+1. Start PostgreSQL. It should be available in a terminal window when you type `psql`.
+1. `CREATE DATABASE wikidb;`.
 1. Change the password in the `config.js` file in the root directory to match your default database's password.
 
 **Server**

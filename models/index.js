@@ -34,20 +34,13 @@ Object.keys( db ).forEach( function( modelName ) {
 // One-to-one
 
 // One-to-many
+db.path.hasMany( db.page );
 
 // Many-to-many
 
 //////////////////
 // Sync
 //////////////////
-
-sequelize.sync()
-.then(function() {
-  console.log( 'Successfully synced database on startup.' );
-})
-.catch(function( error ) {
-  console.log( 'Error syncing database on startup:', error );
-});
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
